@@ -1,4 +1,23 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 body{
+background: linear-gradient(-45deg, #464fd357, #7c1eb333, #e98c349d);
+background-position: center center;
+background-repeat: no-repeat;/*prevents repeat*/
+background-attachment:fixed;
+position: relative;
+background-size: 400% 400%;
+animation: gradient 10s ease infinite
     
 }
 
@@ -31,6 +50,13 @@ div{
 margin: 0;
 padding: 0;
 box-sizing: content-box;
+background: linear-gradient(-45deg, #464fd393, #7c1eb365, #e98b34);
+background-position: center center;
+background-repeat: no-repeat;/*prevents repeat*/
+background-attachment:fixed;
+position: relative;
+background-size: 400% 400%;
+animation: gradient 10s ease infinite
     
 }
 .header-links{
@@ -53,11 +79,8 @@ box-sizing: content-box;
 
 
 #home{
-color: aliceblue;
-    background: linear-gradient(45deg, #464fd393, #7c1eb365, #e98b34);
-    background-position: center center;
-    position: relative;
-    animation: gradient 15s ease infinite; 
+background: #b18bbb85;
+
 }
 
 .main-container{
@@ -119,8 +142,23 @@ color: aliceblue;
     padding: 1rem 2rem;
     border-radius: 5px;   
 }
+.skills:hover{
+    transform: translateY(-7px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(-45deg, #464fd393, #7c1eb365, #e98b34);
+    background-position: center center;
+    background-repeat: no-repeat;/*prevents repeat*/
+    background-attachment:fixed;
+    position: relative;
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite; 
+    color: white;
+    cursor: pointer;
+}
 
 #projects{
+background-color:#bbaa8b85 ;
+
 }
 .project-card{
 display: grid;
@@ -133,7 +171,11 @@ margin-bottom: 4rem;
 #contact{
 background: linear-gradient(-45deg, #464fd393, #7c1eb365, #e98b34);
     background-position: center center;
-    animation: gradient 15s ease infinite; 
+    background-repeat: no-repeat;/*prevents repeat*/
+    background-attachment:fixed;
+    position: relative;
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite; 
 }
 #contact-form-container{
 box-shadow: 0 7px 29px 0 #584d5f65;
@@ -172,14 +214,17 @@ border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.bttn:hover{
+    transform: translateY(-7px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #464fd393, #7c1eb365, #e98b34);
+    background-position: center center;
+    background-repeat: no-repeat;/*prevents repeat*/
+    background-attachment:fixed;
+    position: relative;
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite; 
+    color: white;
+    cursor: pointer;
+
 }
