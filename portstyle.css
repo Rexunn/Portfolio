@@ -18,6 +18,14 @@ p{
     
     
 }
+section{
+    display: block;
+    unicode-bidi: isolate; /*uses complex unicode algo to decide how to display text*/
+}
+div{
+    display: block;
+    unicode-bidi: isolate;
+}
 
 #banner{
 margin: 0;
@@ -42,25 +50,22 @@ box-sizing: content-box;
 
 }
 
-section{
-    display: block;
-    unicode-bidi: isolate; /*uses complex unicode algo to decide how to display text*/
-}
+
 
 #home{
 color: aliceblue;
 background: linear-gradient(45deg, #69e9ad, #393f8b, #611149);/*repeats once next element is reached*/
-    background-repeat: no-repeat;/*prevents repeat*/
-    background-attachment:fixed;
 background-position: center;
-height: 100vh;
-min-height: 80rem;
-max-height: 120rem;
+height: 50vh;
+min-height: 40rem;
+max-height: 80rem;
 position: relative;
 }
 
 .main-container{
-    
+    max-width: 120rem;
+    width: 92%;
+    margin: auto;
 }
 
 #resume{
@@ -77,16 +82,44 @@ position: relative;
 
 #about{
     background: #8b8ebb85;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10rem;
 
 }
+#contact-bttn{
+    background: #923dd8;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
 #about-left{
+    font-size: .8rem;
+    color:#5c5c61;
+    max-width: 60rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
     
 }
 #about-right{
+    display: flex;
+    flex-wrap: wrap;
     
 }
-#skills{
-    
+.skills{
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: .8rem;
+    font-weight: 600;
+    background: #6c6b70;
+    color: #48484b;
+    padding: 1rem 2rem;
+    border-radius: 5px;   
 }
 
 .projects{
