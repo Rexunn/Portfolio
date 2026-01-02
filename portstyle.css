@@ -54,12 +54,10 @@ box-sizing: content-box;
 
 #home{
 color: aliceblue;
-background: linear-gradient(45deg, #69e9ad, #393f8b, #611149);/*repeats once next element is reached*/
-background-position: center;
-height: 50vh;
-min-height: 40rem;
-max-height: 80rem;
-position: relative;
+    background: linear-gradient(45deg, #464fd393, #7c1eb365, #e98b34);
+    background-position: center center;
+    position: relative;
+    animation: gradient 15s ease infinite; 
 }
 
 .main-container{
@@ -122,27 +120,66 @@ position: relative;
     border-radius: 5px;   
 }
 
-.projects{
+#projects{
 }
-#project-card{
-
+.project-card{
+display: grid;
+text-align: center;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 2rem;
+margin-bottom: 4rem;
 }
 
 #contact{
-    
+background: linear-gradient(-45deg, #464fd393, #7c1eb365, #e98b34);
+    background-position: center center;
+    animation: gradient 15s ease infinite; 
 }
 #contact-form-container{
-    
+box-shadow: 0 7px 29px 0 #584d5f65;
 }
 #contact-form{
+display: flex;
+unicode-bidi: isolate;
 
 }
 .form-field{
+margin-bottom: 2rem;
     
 }
 .form-input{
-    
+color: #333333;
+width: 100%;
+font-size: 1rem;
+letter-spacing: 0px;
+font-weight: 600;
+padding: 1rem;
+border-width: 1px;
+border-style: solid;
+border-color: white;
+background: white;
+border-radius: 5px;
 }
 #submit-button{
-    
+  background: #923dd8;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
