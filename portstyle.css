@@ -20,14 +20,26 @@ p{
 }
 
 #banner{
+margin: 0;
+padding: 0;
+box-sizing: content-box;
     
 }
 .header-links{
-    
+    display: flex;
 }
 
 .link-wrapper{
-    
+    list-style: none;
+}
+.link{
+    display: inline-block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
 }
 
 #home{
