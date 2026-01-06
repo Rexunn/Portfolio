@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="portstyle.css">
+    <script src="portscript.js" defer></script>
 </head>
 <body>
     <header id = "banner"> 
@@ -86,8 +87,8 @@
         <h2 class="title"> Contact Me</h2>
         <p><strong>Feel free to reach out to me through any of the following methods:</strong></p>
         <div id="contact-form-container">
-            <form action ="#" id = "contact-form" method ="post">
-                <input type = "hidden" name="form-name" value="form1">
+            <form action ="https://formspree.io/f/mzdznbkn" id = "contact-form" method ="POST">
+                <input type = "hidden" name="form-name" value="contact-form">
                 <div class = "form-field">
                     <label class ="form-label" for="name"> Name:</label>
                     <input required placeholder = "Your Name" type="text" id="name" class = "form-input" name="name">
@@ -100,7 +101,8 @@
                     <label class ="form-label" for="message"> Message:</label>
                     <textarea required cols = "30" rows = "10"placeholder = "Your Message" id="message" class = "form-input" name="message"></textarea> <!-- text area for message -->
                 </div>
-                <a type="submit" id="submit-button" class = "bttn"> Send</a>
+                <button type="submit" id="submit-button" class = "bttn"> Send</button>
+                <p id="my-form-status"></p>
             </form>
         </div>
         </div>

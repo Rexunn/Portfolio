@@ -43,7 +43,7 @@ h1:hover{
     background-size: 100% 100%;
     animation: gradient 5s ease infinite; 
     color: white;
-    cursor: pointer;
+    
 
     color:transparent;
     background-clip:text;
@@ -134,7 +134,7 @@ border-bottom:#00000048 solid 5px;
     background-size: 100% 100%;
     animation: gradient 5s ease infinite; 
     color: white;
-    cursor: pointer;
+    
 
     color:transparent;
     font-weight: 800;
@@ -203,7 +203,7 @@ height: 40rem;
     background-size: 100% 100%;
     animation: gradient 5s ease infinite; 
     color: white;
-    cursor: pointer;
+    
 
     color:transparent;
     background-clip:text;
@@ -375,6 +375,7 @@ transition: transform 0.3s ease;
     padding: 1rem;
     text-align: center;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .bttn:hover{
@@ -383,4 +384,12 @@ transition: transform 0.3s ease;
    
    
    
+}
+
+#my-form-status{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    padding: 1rem;
 }
