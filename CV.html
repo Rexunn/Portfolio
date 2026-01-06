@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyrese Morgan - CV</title>
+    <link rel="stylesheet" href="portstyle.css">
+    <style>
+        /* Specific styles for this page to make the PDF fill the screen */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden; /* Prevents double scrollbars */
+        }
+        
+        .back-button-container {
+            padding: 1rem;
+            background: #333; /* Dark background for the top bar */
+            text-align: center;
+        }
+
+        /* Re-using your button styles, slightly tweaked for this bar */
+        .back-btn {
+            text-decoration: none;
+            color: white;
+            background: #923dd8;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #pdf-viewer {
+            flex-grow: 1; /* Takes up all remaining space */
+            width: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back-button-container">
+        <a href="portfolio.html" class="back-btn">← Back to Portfolio</a>
+    </div>
+
+    <iframe id="pdf-viewer" src="TyreseMorganCV2026.pdf">
+    </iframe>
+
+</body>
+</html>
