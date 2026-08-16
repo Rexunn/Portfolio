@@ -35,3 +35,26 @@ async function handleSubmit(event) {
 if (form) {
     form.addEventListener("submit", handleSubmit);
 }
+
+// toggle button
+const themeButton = document.getElementById('theme-toggle');
+
+// Check if the button exists to avoid errors
+if (themeButton) {
+    themeButton.addEventListener('click', () => {
+        // Toggle the class on the body
+        document.body.classList.toggle('gradient-mode');
+        
+        // Optional: Save preference so it remembers on refresh
+        if (document.body.classList.contains('gradient-mode')) {
+            localStorage.setItem('theme', 'gradient');
+        } else {
+            localStorage.setItem('theme', 'default');
+        }
+    });
+}
+
+// Check for saved preference when page loads
+if (localStorage.getItem('theme') === 'gradient') {
+    document.body.classList.add('gradient-mode');
+}

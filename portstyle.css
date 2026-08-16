@@ -36,10 +36,6 @@ h1{
 h1:hover{   
     transform: translateY(-5px);
     background: linear-gradient(-45deg, #1a1d4ec2, #d80a4e65, #1b5227);
-    background-position: center center;
-    background-repeat: no-repeat;/*prevents repeat*/
-    background-attachment:fixed;
-    position: relative;
     background-size: 100% 100%;
     animation: gradient 5s ease infinite; 
     color: white;
@@ -127,13 +123,9 @@ border-bottom:#00000048 solid 5px;
     transition: transform 0.3s ease;
     transform: scale(1.1);
     background: linear-gradient(-45deg, #1a1d4ec2, #d80a4e65, #1b5227);
-    background-position: center center;
-    background-repeat: no-repeat;/*prevents repeat*/
-    background-attachment:fixed;
-    position: relative;
     background-size: 100% 100%;
     animation: gradient 5s ease infinite; 
-    color: white;
+
     
 
     color:transparent;
@@ -166,11 +158,11 @@ height: 40rem;
     max-width: 120rem;
     width: 92%;
     margin: auto;
-      max-width: 60rem;
+    max-width: 70rem;
 }
 
 #resume{
-    margin-left: 50%;
+    margin-left: 45%;
     padding: 1rem;
 
 }
@@ -196,15 +188,8 @@ height: 40rem;
 #about h2:hover{
     transform: translateY(-5px);
     background: linear-gradient(-45deg, #05a5aad8, #c27012c0, #681225);
-     background-position: center center;
-    background-repeat: no-repeat;/*prevents repeat*/
-    background-attachment:fixed;
-    position: relative;
     background-size: 100% 100%;
     animation: gradient 5s ease infinite; 
-    color: white;
-    
-
     color:transparent;
     background-clip:text;
 }
@@ -223,11 +208,23 @@ height: 40rem;
     grid-column: 2;  
     
 }
+#pic{
+    border: groove #5c5c61 5px;
+    border-radius: 10px;
+    width: 23rem;
+    height: 50vh;
+}
 
 #about-right p{
  font-size: 1.2rem;
  padding-bottom: 10px;
 }
+#about-left p{
+ font-size: 1.2rem;
+ padding-bottom: 10px;
+}
+
+
 
 
 .skills{
@@ -247,14 +244,9 @@ height: 40rem;
     transform: translateY(-7px);
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
     background: linear-gradient(-45deg, #464fd393, #7c1eb365, #e98b34);
-    background-position: center center;
-    background-repeat: no-repeat;/*prevents repeat*/
-    background-attachment:fixed;
-    position: relative;
     background-size: 400% 400%;
     animation: gradient 7s ease infinite; 
     color: white;
-    cursor: pointer;
 }
 
 #projects{
@@ -266,14 +258,8 @@ background-color:#bbaa8b85 ;
 #projects h2:hover{
     transform: translateY(-5px);
     background: linear-gradient(-45deg, #1a1d4ec2, #d80a4e65, #1b5227);
-    background-position: center center;
-    background-repeat: no-repeat;/*prevents repeat*/
-    background-attachment:fixed;
-    position: relative;
     background-size: 100% 100%;
     animation: gradient 5s ease infinite; 
-    color: white;
-    cursor: pointer;
 
     color:transparent;
     background-clip:text;
@@ -287,7 +273,7 @@ margin-bottom: 4rem;
 }
 
 #contact{
-background: linear-gradient(-45deg, #464fd393, #7c1eb365, #e98b34);
+    background: linear-gradient(-45deg, #464fd393, #7c1eb365, #e98b34);
     background-position: center center;
     background-repeat: no-repeat;/*prevents repeat*/
     background-attachment:fixed;
@@ -304,15 +290,7 @@ background: linear-gradient(-45deg, #464fd393, #7c1eb365, #e98b34);
 #contact h2:hover{
     transform: translateY(-5px);
     background: linear-gradient(-45deg, #62117ad8, #1c5e0bc0, #1ae06d);
-     background-position: center center;
-    background-repeat: no-repeat;/*prevents repeat*/
-    background-attachment:fixed;
-    position: relative;
-    background-size: 100% 100%;
     animation: gradient 5s ease infinite; 
-    color: white;
-    cursor: pointer;
-
     color:transparent;
     background-clip:text;
 }
@@ -388,8 +366,93 @@ transition: transform 0.3s ease;
 
 #my-form-status{
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
+  
+}
+/* toggle button*/
+#theme-toggle{
+    background: transparent;
+    border: 2px solid white;
     color: white;
-    padding: 1rem;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute; 
+    left: 20px;
+    top: 25px;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: white;
+    color: #923dd8;
+}
+
+
+
+/* --- SECTION 1: HOME --- */
+/* 1. Background becomes the H1's dark green/red gradient */
+body.gradient-mode #home {
+    background: linear-gradient(-45deg, #1a1d4ec2, #d80a4e65, #1b5227);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite; /* Faster animation like the text had */
+}
+/* 2. Text becomes the old purple background color */
+body.gradient-mode #home h1 {
+    color: #b18bbb; 
+    background: none; 
+    -webkit-text-fill-color: initial;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Shadow ensures readability */
+}
+
+
+/* --- SECTION 2: ABOUT --- */
+/* 1. Background becomes the H2's teal/orange/maroon gradient */
+body.gradient-mode #about {
+    background: linear-gradient(45deg, #05a5aad8, #c27012c0, #681225);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+}
+/* 2. Text becomes the old blue-grey background color */
+body.gradient-mode #about h2 {
+    color: #8b8ebb;
+    background: none;
+    -webkit-text-fill-color: initial;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+
+/* --- SECTION 3: PROJECTS --- */
+/* 1. Background becomes the H2's gradient */
+body.gradient-mode #projects {
+    background: linear-gradient(-45deg, #1a1d4ec2, #d80a4e65, #1b5227);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+}
+/* 2. Text becomes the old beige background color */
+body.gradient-mode #projects h2 {
+    color: #bbaa8b; /* Removed transparency for better visibility */
+    background: none;
+    -webkit-text-fill-color: initial;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+
+/* --- SECTION 4: CONTACT --- */
+/* 1. Swap from the default Blue/Orange gradient to the Green/Purple gradient */
+body.gradient-mode #contact {
+    /* This is the gradient currently used on your Contact H2 Hover */
+    background: linear-gradient(45deg, #62117ad8, #1c5e0bc0, #1ae06d);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+}
+
+/* 2. Text color swap */
+body.gradient-mode #contact h2 {
+    background: linear-gradient(-45deg, #464fd393, #7c1eb365, #e98b34);
+    background-size: 100% 100%;
+    animation: gradient 5s ease infinite; 
+    color:transparent;
+    background-clip:text;
+    
 }
